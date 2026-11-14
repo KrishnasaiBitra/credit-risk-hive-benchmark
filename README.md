@@ -3,6 +3,8 @@
 The project predicts charged-off versus fully paid Lending Club loans, benchmarks
 three equivalent Hive pipelines and audits home-ownership group disparities.
 
+**Live demonstration:** [Credit Risk Lab](https://credit-risk-hive-benchmark.vercel.app/)
+
 - [Reproduce and verify the work](REPRODUCE.md)
 - [Report](results/report/project_results.md)
 - [Demo guide and presentation outline](DEMO_GUIDE.md)

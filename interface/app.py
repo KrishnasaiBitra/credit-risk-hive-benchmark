@@ -99,7 +99,7 @@ def load_model(name):
 
 @app.exception_handler(Exception)
 async def artifact_error(request: Request, exc: Exception):
-    logging.exception('Interface request failed: %s', request.url.path)
+    logging.exception('Interface request failed: %s (%s: %s)', request.url.path, type(exc).__name__, exc)
     return JSONResponse(status_code=503, content={'detail': 'The research data or model could not be loaded. Check the local server log and restore the project artifacts. No result has been substituted.'})
 
 

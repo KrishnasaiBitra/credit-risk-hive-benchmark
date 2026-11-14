@@ -1,0 +1,10 @@
+{
+  "source": "GNU OpenMP library distributed in the official scikit-learn Linux x86_64 wheel",
+  "scikit_learn_version": "1.9.1",
+  "original_library_name": "libgomp-e985bcbb.so.1.0.0",
+  "original_sha256": "a43904e4fa297301d4640dc1bb3c8a3480b406f99e498eba9b1914b68aab604a",
+  "bundled_sha256": "45a9fe613851928f9d0e4cb90f5b423abddb27e318d228ac1d91c677d498245f",
+  "change": "ELF SONAME changed with patchelf to libgomp.so.1; model binaries are unchanged.",
+  "license_notice": "third_party/scikit-learn-COPYING.txt",
+  "upstream_source": "https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libgomp"
+}

@@ -11,6 +11,17 @@ The full experimental environment remains documented in `requirements-lock.txt`.
 No Hive/Hadoop services run on Vercel. It hosts the dashboard and fixed-model
 inference only; all cluster measurements were recorded in the local experiment.
 
+## LightGBM native runtime
+
+Some serverless Linux images do not provide `libgomp.so.1`. The entrypoint first
+tries the system OpenMP runtime, then loads the Linux x86_64 fallback in `native/`
+before importing model dependencies. This fallback comes from the pinned official
+scikit-learn wheel; only its ELF SONAME was adjusted. Provenance and SHA-256
+values are in `native/provenance.json`; the license notice is under `third_party/`.
+The original joblib model files are unchanged. To recreate this fallback on Linux,
+install the development tool `patchelf==0.17.2.4` and run
+`python scripts/prepare_openmp.py`. It is already included for deployment.
+
 ## Included data
 
 `interface/runtime/` contains source-derived research/schema/curve payloads and
