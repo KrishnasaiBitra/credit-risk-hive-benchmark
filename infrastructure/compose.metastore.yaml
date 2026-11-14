@@ -1,0 +1,24 @@
+services:
+  metastore:
+    image: apache/hive:4.2.1
+    hostname: metastore
+    environment:
+      SERVICE_NAME: metastore
+      DB_DRIVER: postgres
+      HIVE_CUSTOM_CONF_DIR: /hive_custom_conf
+      SERVICE_OPTS: >-
+        -Djavax.jdo.option.ConnectionDriverName=org.postgresql.Driver
+        -Djavax.jdo.option.ConnectionURL=jdbc:postgresql://postgres:5432/metastore_db
+        -Djavax.jdo.option.ConnectionUserName=hive
+        -Djavax.jdo.option.ConnectionPassword=${HIVE_DB_PASSWORD:?Set HIVE_DB_PASSWORD in infrastructure/.env}
+    volumes:
+      - ./hive-conf:/hive_custom_conf:ro
+      - ./jdbc/postgresql-42.7.5.jar:/opt/hive/lib/postgres.jar:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      namenode:
+        condition: service_started
+      datanode:
+        condition: service_started
+    mem_limit: 1536m

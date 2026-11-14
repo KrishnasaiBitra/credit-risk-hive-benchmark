@@ -1,0 +1,20 @@
+{
+  "apache/hadoop:3.5.0": {
+    "id": "sha256:46980ea1653eb3453d9cf43c4b7cb69c4729e19612d4902da0372d11e11a7a12",
+    "digests": [
+      "apache/hadoop@sha256:46980ea1653eb3453d9cf43c4b7cb69c4729e19612d4902da0372d11e11a7a12"
+    ]
+  },
+  "apache/hive:4.2.1": {
+    "id": "sha256:b19bb5bd01f233a3f99d941ebf08acaff68c55911dd5fa42ea03928e51860b91",
+    "digests": [
+      "apache/hive@sha256:b19bb5bd01f233a3f99d941ebf08acaff68c55911dd5fa42ea03928e51860b91"
+    ]
+  },
+  "postgres:17-bookworm": {
+    "id": "sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994",
+    "digests": [
+      "postgres@sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994"
+    ]
+  }
+}

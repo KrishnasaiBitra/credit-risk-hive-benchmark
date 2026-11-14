@@ -1,0 +1,8 @@
+NAME                            CPU %     MEM USAGE / LIMIT   MEM %
+credit-risk-nodemanager-1       0.31%     357.4MiB / 3GiB     11.64%
+credit-risk-resourcemanager-1   0.92%     275.9MiB / 768MiB   35.93%
+credit-risk-hiveserver2-1       0.66%     1.205GiB / 2GiB     60.24%
+credit-risk-metastore-1         0.26%     370.7MiB / 1.5GiB   24.13%
+credit-risk-postgres-1          0.12%     102.2MiB / 512MiB   19.96%
+credit-risk-datanode-1          0.26%     302MiB / 1GiB       29.50%
+credit-risk-namenode-1          0.60%     366MiB / 1GiB       35.74%

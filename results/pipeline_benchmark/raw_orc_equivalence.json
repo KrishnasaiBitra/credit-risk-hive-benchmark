@@ -1,0 +1,28 @@
+{
+  "columns_compared": [
+    "id",
+    "issue_d",
+    "loan_status",
+    "loan_amnt",
+    "term",
+    "annual_inc",
+    "dti",
+    "emp_length",
+    "home_ownership",
+    "purpose",
+    "verification_status",
+    "fico_range_low",
+    "fico_range_high",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "open_acc",
+    "pub_rec",
+    "revol_bal",
+    "revol_util",
+    "total_acc",
+    "pub_rec_bankruptcies",
+    "earliest_cr_line"
+  ],
+  "mismatched_row_patterns": 0,
+  "passed": true
+}

@@ -1,0 +1,11 @@
+{
+  "source_file": "/mnt/c/Users/krish/Desktop/big-data-project/archive/accepted_2007_to_2018q4.csv/accepted_2007_to_2018Q4.csv",
+  "total_rows": 2260701,
+  "total_columns": 151,
+  "unique_nonblank_loan_ids": 2260701,
+  "repeated_nonblank_loan_id_rows": 0,
+  "blank_loan_id_rows": 0,
+  "earliest_issue_month": "2007-06",
+  "latest_issue_month": "2018-12",
+  "blank_or_unparseable_issue_dates": 33
+}

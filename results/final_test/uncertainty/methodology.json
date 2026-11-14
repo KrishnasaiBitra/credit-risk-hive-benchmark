@@ -1,0 +1,28 @@
+{
+  "method": "Ordinary paired loan-row bootstrap; percentile 95% intervals",
+  "replicates": 1000,
+  "seed": 42,
+  "rows": 90615,
+  "paired_difference": "LightGBM minus Logistic Regression; same sampled rows for both models",
+  "thresholds": {
+    "Logistic Regression": 0.15,
+    "LightGBM": 0.15
+  },
+  "gap_groups": [
+    "MORTGAGE",
+    "RENT",
+    "OWN"
+  ],
+  "excluded_from_gaps": "OTHER_UNKNOWN (one test loan)",
+  "prediction_sha256": {
+    "logistic_regression_predictions.csv": "a67eff457ecacf8d42dd968d0a5f3d1977ab9f970e3c724f332d26d5605acd45",
+    "lightgbm_predictions.csv": "97d3aa5335634b6705e36c26bcc641f0ee66c80a08951e97e81bc14fe37b4bb1"
+  },
+  "limitations": [
+    "Assumes independent loan rows; repeated borrowers and time dependence are not modeled.",
+    "Conditional on fixed trained models, preprocessing, thresholds and this test cohort.",
+    "Does not include training or model-selection uncertainty, or correct retrospective label availability.",
+    "Intervals are pointwise, without multiple-comparison correction.",
+    "Home-ownership gaps are descriptive disparities, not causal evidence of discrimination."
+  ]
+}

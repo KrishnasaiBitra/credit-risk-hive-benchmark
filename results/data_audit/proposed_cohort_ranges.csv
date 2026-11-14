@@ -1,0 +1,7 @@
+feature,minimum,maximum,missing_or_invalid,negative
+loan_amnt,1000.0,35000.0,0,0
+annual_inc,3000.0,7500000.0,0,0
+dti,0.0,39.99,0,0
+revol_util,0.0,892.3,174,0
+fico_range_low,660.0,845.0,0,0
+fico_range_high,664.0,850.0,0,0

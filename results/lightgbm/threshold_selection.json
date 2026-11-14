@@ -1,0 +1,24 @@
+{
+  "model": "LightGBM",
+  "selection_dataset": "validation",
+  "selection_rule": "Highest F1 on the predefined grid; ties use the higher threshold.",
+  "threshold_grid": [
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "selected_threshold": 0.15,
+  "best_iteration": 522,
+  "preprocessing_seconds": 0.33669415400072467,
+  "classifier_fit_seconds": 4.009527669000818,
+  "validation_prediction_seconds": 0.6287696330000472,
+  "test_set_evaluated": false
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Risk Lab · A Hive Study</title>
+  <meta name="description" content="A local research dashboard for reproducible Hive credit-risk pipeline benchmarks and model auditing.">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/architecture.css">
+  <script defer src="/static/vendor/plotly.min.js"></script>
+  <script defer src="/static/architecture.js"></script>
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20V10m8 10V4m8 16v-7"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18m-5 0h10M3 7h18M5 7l-4 8h8Zm14 0-4 8h8Z"/></symbol>
+  <symbol id="i-loan" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="15" rx="2"/><path d="m10 7 5 4-5 4ZM8 22h8m-4-4v4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7Zm0 0v5h5M8 12h8M8 16h8"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+</defs></svg>
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#overview"><span class="brand-mark">cr<span>.</span></span><span>Credit Risk Lab<small>A HIVE STUDY</small></span></a>
+  <div class="nav-label">RESEARCH WORKSPACE</div>
+  <nav aria-label="Main navigation">
+    <a href="#overview" data-page="overview"><svg><use href="#i-grid"/></svg>Overview</a>
+    <a href="#architecture" data-page="architecture"><svg><use href="#i-layers"/></svg>Project architecture</a>
+    <a href="#pipelines" data-page="pipelines"><svg><use href="#i-bars"/></svg>Pipeline benchmark</a>
+    <a href="#models" data-page="models"><svg><use href="#i-layers"/></svg>Model comparison</a>
+    <a href="#fairness" data-page="fairness"><svg><use href="#i-scale"/></svg>Fairness audit</a>
+    <a href="#literature" data-page="literature"><svg><use href="#i-layers"/></svg>Research comparison</a>
+    <a href="#demo" data-page="demo"><svg><use href="#i-loan"/></svg>Loan risk demo<span class="nav-tag">TRY IT</span></a>
+    <a href="#reports" data-page="reports"><svg><use href="#i-file"/></svg>Reports & method</a>
+  </nav>
+  <div class="sidebar-note"><span class="small-label">THE RESEARCH QUESTION</span><p>Which Hive pipeline design works best for credit risk, and why?</p><span class="sidebar-line"></span><small>Big Data Management<br>Local research demonstration</small></div>
+</aside>
+<div class="workspace">
+  <header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg><use href="#i-menu"/></svg></button><span>Workspace</span><span class="slash">/</span><strong id="crumb">Overview</strong></div><div class="top-actions"><span class="recorded-label"><span></span>Recorded study · Nov 2026</span><a class="button button-small" href="/api/download/report"><svg><use href="#i-download"/></svg>Report PDF</a></div></header>
+  <main id="main" tabindex="-1"><div id="view" aria-live="polite"><div class="loading"><span class="spinner"></span>Loading research artifacts…</div></div></main>
+  <footer class="footer"><span>Credit Risk Lab <span class="footer-dot">/</span> A reproducible Hive pipeline benchmark</span><span>Single host. Retrospective cohort. Fixed models.</span></footer>
+</div>
+<noscript><div class="noscript">Enable JavaScript to use the dashboard. The PDF report remains available at /api/download/report.</div></noscript>
+</body>
+</html>

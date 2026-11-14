@@ -1,0 +1,9 @@
+{
+  "conversion_seconds": 13.56190439099737,
+  "measurement": "repeat_conversion_on_current_system",
+  "scope": "CSV read and ORC write; excludes table creation",
+  "compression": "ZLIB",
+  "cold_cache_controlled": false,
+  "row_count": 306462,
+  "row_count_passed": true
+}

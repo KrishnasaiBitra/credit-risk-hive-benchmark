@@ -1,0 +1,22 @@
+# Local data and credentials
+.env
+.env.*
+!.env.example
+!infrastructure/.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.bak
+*.partial
+.vercel/
+archive/
+data/
+infrastructure/runtime/
+infrastructure/jdbc/
+infrastructure/backup-*/
+results/reproducibility/*/data/
+results/reproducibility/*/models/
+*_predictions.csv
+*.before-*
+.DS_Store

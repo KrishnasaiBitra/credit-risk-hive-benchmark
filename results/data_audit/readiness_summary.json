@@ -1,0 +1,11 @@
+{
+  "total_rows": 2260701,
+  "provisional_resolved_rows": 1345310,
+  "problem_row_counts": {
+    "blank_status": 33,
+    "invalid_issue_date": 33,
+    "both_problems": 33,
+    "either_problem": 33
+  },
+  "candidate_features_absent": []
+}

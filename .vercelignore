@@ -1,0 +1,12 @@
+archive/
+data/
+infrastructure/
+src/
+sql/
+notebooks/
+tests/
+.git/
+**/__pycache__/
+**/*.pyc
+results/data_audit/
+results/interface_checks/

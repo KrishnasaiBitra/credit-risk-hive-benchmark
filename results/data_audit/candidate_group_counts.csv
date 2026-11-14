@@ -1,0 +1,19 @@
+attribute,group,row_count
+home_ownership,MORTGAGE,665579
+home_ownership,RENT,534421
+home_ownership,OWN,144832
+emp_length,10+ years,442199
+emp_length,< 1 year,108061
+emp_length,2 years,121743
+emp_length,3 years,107597
+emp_length,1 year,88494
+emp_length,5 years,84154
+emp_length,(blank),78511
+emp_length,4 years,80556
+emp_length,8 years,60701
+emp_length,6 years,62733
+emp_length,9 years,50937
+emp_length,7 years,59624
+home_ownership,ANY,286
+home_ownership,NONE,48
+home_ownership,OTHER,144

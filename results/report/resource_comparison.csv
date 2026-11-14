@@ -1,0 +1,4 @@
+pipeline,median_of_run_cpu_medians,highest_sampled_memory_MiB,minimum_snapshots_per_run,maximum_snapshots_per_run
+CSV,155.31,3553.5080000000003,15,17
+Prepared_ORC,23.3,3515.408,1,2
+Raw_ORC,157.74,3678.344,12,16

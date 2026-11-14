@@ -1,0 +1,15 @@
+{
+  "pipelines": {
+    "CSV": "credit_risk.model_features",
+    "Raw_ORC": "credit_risk.model_features_orc",
+    "Prepared_ORC": "credit_risk.model_features_prepared_orc"
+  },
+  "expected_rows": 306462,
+  "measured_runs_per_pipeline": 5,
+  "fetch_batch_size": 10000,
+  "fresh_cursor_per_export": true,
+  "query_results_cache_enabled": false,
+  "random_seed": 42,
+  "timing_scope": "Execute through complete CSV export, including fetching, CSV writing and file close. Filesystem sync not forced.",
+  "cache_note": "Initial runs excluded from summary. OS and JVM caches are not cleared."
+}

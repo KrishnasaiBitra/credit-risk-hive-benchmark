@@ -1,0 +1,121 @@
+{
+  "round": 3,
+  "pipeline": "Prepared_ORC",
+  "row_count": 306462,
+  "monitored_export_seconds": 4.436135263000324,
+  "samples": [
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.15%",
+      "memory_usage_and_limit": "304.9MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "13.12%",
+      "memory_usage_and_limit": "1.104GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.19%",
+      "memory_usage_and_limit": "371.9MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.40%",
+      "memory_usage_and_limit": "366.4MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "3.93%",
+      "memory_usage_and_limit": "957.1MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.09%",
+      "memory_usage_and_limit": "104.1MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0001874029985629022,
+      "sample_end_seconds": 2.007009831999312,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.78%",
+      "memory_usage_and_limit": "276.9MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.79%",
+      "memory_usage_and_limit": "303.8MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "12.49%",
+      "memory_usage_and_limit": "1.104GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.24%",
+      "memory_usage_and_limit": "371.7MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.76%",
+      "memory_usage_and_limit": "366.1MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "6.29%",
+      "memory_usage_and_limit": "627MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "5.68%",
+      "memory_usage_and_limit": "104.7MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.5072010119984043,
+      "sample_end_seconds": 4.0402802280004835,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.69%",
+      "memory_usage_and_limit": "276.9MiB / 768MiB",
+      "ended_before_export_finished": true
+    }
+  ],
+  "monitor_errors": []
+}

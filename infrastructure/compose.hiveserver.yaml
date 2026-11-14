@@ -1,0 +1,20 @@
+services:
+  hiveserver2:
+    image: apache/hive:4.2.1
+    hostname: hiveserver2
+    environment:
+      SERVICE_NAME: hiveserver2
+      IS_RESUME: "true"
+      HIVE_CUSTOM_CONF_DIR: /hive_custom_conf
+      SERVICE_OPTS: >-
+        -Dhive.metastore.uris=thrift://metastore:9083
+        -Dhive.server2.enable.doAs=false
+    volumes:
+      - ./hive-conf:/hive_custom_conf:ro
+    ports:
+      - "127.0.0.1:10000:10000"
+      - "127.0.0.1:10002:10002"
+    depends_on:
+      metastore:
+        condition: service_started
+    mem_limit: 2g

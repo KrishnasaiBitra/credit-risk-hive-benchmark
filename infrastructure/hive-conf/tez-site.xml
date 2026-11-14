@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <property>
+    <name>tez.lib.uris</name>
+    <value>hdfs://namenode:8020/apps/tez/tez-0.10.5.tar.gz</value>
+  </property>
+  <property>
+    <name>tez.ignore.lib.uris</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>tez.use.cluster.hadoop-libs</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>tez.local.mode</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>tez.am.mode.session</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>tez.am.resource.memory.mb</name>
+    <value>768</value>
+  </property>
+  <property>
+    <name>tez.am.launch.cmd-opts</name>
+    <value>-Xmx512m</value>
+  </property>
+  <property>
+    <name>tez.task.resource.memory.mb</name>
+    <value>512</value>
+  </property>
+  <property>
+    <name>tez.task.launch.cmd-opts</name>
+    <value>-Xmx384m</value>
+  </property>
+  <property>
+    <name>tez.am.staging-dir</name>
+    <value>/user/hive/tez-staging</value>
+  </property>
+</configuration>

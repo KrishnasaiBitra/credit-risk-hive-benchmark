@@ -1,0 +1,2 @@
+phase,round,position,pipeline,row_count,execute_seconds,total_export_seconds,export_bytes
+initial,0,1,Raw_ORC,0,23.470439447999524,23.482066568001756,322

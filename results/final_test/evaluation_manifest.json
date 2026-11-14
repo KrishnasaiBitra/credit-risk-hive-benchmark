@@ -1,0 +1,44 @@
+{
+  "frozen_at_utc": "2026-11-08T13:14:22.661246+00:00",
+  "features": [
+    "loan_amount",
+    "annual_income",
+    "dti",
+    "employment_years",
+    "employment_missing",
+    "fico_midpoint",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "open_accounts",
+    "public_records",
+    "revolving_balance",
+    "revolving_utilization",
+    "utilization_missing",
+    "total_accounts",
+    "bankruptcies",
+    "credit_history_months",
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "selected_thresholds": {
+    "Logistic Regression": 0.15,
+    "LightGBM": 0.15
+  },
+  "threshold_selection_dataset": "validation",
+  "lightgbm_best_iteration": 522,
+  "positive_class": "Charged Off",
+  "model_refitting": false,
+  "file_sha256": {
+    "models/dummy_classifier.joblib": "a29953bac86af56b3b471cdd0b16e058c435b6dd39a73873388646300a4cb070",
+    "models/logistic_regression.joblib": "d9b67220be537ed5836fcf3462056ac18d4304b67984badb68821cd398d0025e",
+    "models/lightgbm.joblib": "25976b4a74c8cc4c20d2aa972f1a78f68013028da15d55a614c0c8f44aa031ad",
+    "data/features/test.csv": "49d65e5cc471a0e8faadb95a00044de8f1b7d92e84912e18ab464e779a1fb98d",
+    "results/baseline/baseline_config.json": "f4065f0767c6ca62e8155efe194874faa2cc2bb58d27ddbc072ac0b5362b512c",
+    "results/baseline/threshold_selection.json": "f35b3402e967d3f44da554f0ebc7b507c30e2fbb0b25ba83c9652c668dbe1199",
+    "results/lightgbm/threshold_selection.json": "14b71b9a545c51c0ca83914b77448292279fc75195a571fd6759705aef7e81ec"
+  },
+  "evaluation_completed": true,
+  "limitation": "Retrospective issue-date split; training outcome availability at the validation/test issue dates is not established.",
+  "test_rows": 90615
+}

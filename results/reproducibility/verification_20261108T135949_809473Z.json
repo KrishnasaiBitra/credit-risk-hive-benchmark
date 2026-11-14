@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "hive_checked": false,
+  "checks": [
+    "Frozen fingerprint: models/dummy_classifier.joblib",
+    "Frozen fingerprint: models/logistic_regression.joblib",
+    "Frozen fingerprint: models/lightgbm.joblib",
+    "Frozen fingerprint: data/features/test.csv",
+    "Frozen fingerprint: results/baseline/baseline_config.json",
+    "Frozen fingerprint: results/baseline/threshold_selection.json",
+    "Frozen fingerprint: results/lightgbm/threshold_selection.json",
+    "train IDs and count",
+    "train labels",
+    "train nonmissing features",
+    "validation IDs and count",
+    "validation labels",
+    "validation nonmissing features",
+    "test IDs and count",
+    "test labels",
+    "test nonmissing features",
+    "No loan-ID overlap between splits",
+    "Logistic Regression threshold",
+    "Logistic Regression saved prediction metrics",
+    "LightGBM threshold",
+    "LightGBM saved prediction metrics"
+  ]
+}

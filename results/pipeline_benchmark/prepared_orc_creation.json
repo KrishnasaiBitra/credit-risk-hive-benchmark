@@ -1,0 +1,6 @@
+{
+  "source": "credit_risk.model_features_orc",
+  "destination": "credit_risk.model_features_prepared_orc",
+  "insert_seconds": 23.827668525998888,
+  "scope": "Feature calculation and ORC write; excludes raw CSV-to-ORC conversion and table creation."
+}

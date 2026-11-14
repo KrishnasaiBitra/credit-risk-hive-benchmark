@@ -1,0 +1,60 @@
+{
+  "runs": [
+    {
+      "round": 1,
+      "pipeline": "Raw_ORC",
+      "seconds": 25.898303711001063,
+      "container_sample_records": 91
+    },
+    {
+      "round": 1,
+      "pipeline": "CSV",
+      "seconds": 34.53902537200338,
+      "container_sample_records": 119
+    },
+    {
+      "round": 1,
+      "pipeline": "Prepared_ORC",
+      "seconds": 3.7267464059987105,
+      "container_sample_records": 14
+    },
+    {
+      "round": 2,
+      "pipeline": "Prepared_ORC",
+      "seconds": 3.3798733739968156,
+      "container_sample_records": 14
+    },
+    {
+      "round": 2,
+      "pipeline": "Raw_ORC",
+      "seconds": 26.511855459997605,
+      "container_sample_records": 91
+    },
+    {
+      "round": 2,
+      "pipeline": "CSV",
+      "seconds": 35.80442909399426,
+      "container_sample_records": 126
+    },
+    {
+      "round": 3,
+      "pipeline": "Raw_ORC",
+      "seconds": 33.28985303299851,
+      "container_sample_records": 119
+    },
+    {
+      "round": 3,
+      "pipeline": "Prepared_ORC",
+      "seconds": 4.436135263000324,
+      "container_sample_records": 14
+    },
+    {
+      "round": 3,
+      "pipeline": "CSV",
+      "seconds": 31.660190513000998,
+      "container_sample_records": 112
+    }
+  ],
+  "scope": "Seven project Docker containers; excludes Python client",
+  "limitations": "Sampled CPU and memory, not true peaks or total CPU time. Short exports may have few samples. Monitoring adds overhead."
+}

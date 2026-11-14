@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>hdfs://namenode:8020/warehouse/managed</value>
+  </property>
+  <property>
+    <name>hive.metastore.warehouse.external.dir</name>
+    <value>hdfs://namenode:8020/warehouse/external</value>
+  </property>
+  <property>
+    <name>metastore.event.db.notification.api.auth</name>
+    <value>false</value>
+  </property>
+  <property>
+    <name>hive.tez.container.size</name>
+    <value>512</value>
+  </property>
+  <property>
+    <name>hive.tez.java.opts</name>
+    <value>-Xmx384m</value>
+  </property>
+  <property>
+    <name>hive.exec.reducers.max</name>
+    <value>2</value>
+  </property>
+</configuration>

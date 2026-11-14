@@ -1,0 +1,31 @@
+{
+  "verified_at_utc": "2026-11-08T14:00:14.262069+00:00",
+  "status": "passed",
+  "original_test_metrics_maximum_replay_difference": 0.0,
+  "evidence": {
+    "frozen_and_hive_checks": "results/reproducibility/verification_20261108T134747_840465Z.json",
+    "isolated_replay": "results/reproducibility/replay_20261108_134809_490641/replay_manifest.json",
+    "ordered_models": "results/reproducibility/ordered_models_20261108T135402_057894Z/replay_manifest.json",
+    "harness_smoke_checks": "results/reproducibility/harness_checks_20261108T135442_110989Z/checks.json",
+    "resource_summary_recheck": "results/reproducibility/resource_summary_check_20261108_135019/verification.txt"
+  },
+  "script_sha256": {
+    "benchmark_pipelines.py": "e2f9167dd6f5ad3675d548db7638c77b6c385551a6348c105657032e3e4fad81",
+    "benchmark_preparation.py": "c470daefe729cf59130f5332d8c97ed5f1f7733f169049b46c4d1df788abb5b4",
+    "summarize_resources.py": "ee5db24985d95b4e80a0b1a85877616cd9a2595825048528cb792e71ab15fd00",
+    "capture_environment.py": "f7dbb7ca54a1aae9afe43cd6364e6a0d249ba4803e87177f9c9f54662fa80f4a",
+    "verify_project.py": "465bf19b41e5f8557e711f07490229970f1cbcf1b73da0500e986bbf10fc5530",
+    "replay_project.py": "57af55299bc2e9aa5368549a4d444af5b16e3289e1d57d2b80f2977f0a3f13d7",
+    "replay_models.py": "8921c9d1a973b0ab6637701c68e7a46996b5dffeca212caafdb0645a9614392f",
+    "select_baseline_threshold.py": "6530a4ccb4d86ca815b406f233c3e3c8ebe767527fb2cd8b69b7f9c72fdcd9cc",
+    "run_reproducibility_checks.py": "fde43a72b8cf8597846b587e91d718c017961884b36ab40e63959613773c38eb",
+    "bootstrap_test_results.py": "0c2e3eb2b83acfd3025d5cd1df884a1b84f4e3ffd02754a311f58638ddb74b63",
+    "build_results_report.py": "53022a2d96dd136cb95e9b253683ff34a76110a132be8f4d5981daf0c42bc65b"
+  },
+  "boundaries": [
+    "Fresh Windows/WSL installation and fresh-volume initialization were not rerun.",
+    "New benchmark runs are code-path smoke checks; the original five-run comparison is unchanged.",
+    "The full Hive replay starts from the existing audited cohort; raw-source audit/extraction scripts are supplied.",
+    "Lecturer-specific report formatting, student details and finished slides remain submission tasks."
+  ]
+}

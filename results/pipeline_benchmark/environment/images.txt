@@ -1,0 +1,8 @@
+CONTAINER                       REPOSITORY          TAG                 PLATFORM            IMAGE ID            SIZE                CREATED
+credit-risk-datanode-1          apache/hadoop       3.5.0               linux/amd64         46980ea1653e        2.19GB              6 months ago
+credit-risk-hiveserver2-1       apache/hive         4.2.1               linux/amd64         b19bb5bd01f2        3.93GB              2 months ago
+credit-risk-metastore-1         apache/hive         4.2.1               linux/amd64         b19bb5bd01f2        3.93GB              2 months ago
+credit-risk-namenode-1          apache/hadoop       3.5.0               linux/amd64         46980ea1653e        2.19GB              6 months ago
+credit-risk-nodemanager-1       apache/hive         4.2.1               linux/amd64         b19bb5bd01f2        3.93GB              2 months ago
+credit-risk-postgres-1          postgres            17-bookworm         linux/amd64         665dc7b37ac5        620MB               3 days ago
+credit-risk-resourcemanager-1   apache/hive         4.2.1               linux/amd64         b19bb5bd01f2        3.93GB              2 months ago

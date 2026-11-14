@@ -1,0 +1,31 @@
+{
+  "training_rows": 143892,
+  "validation_rows": 71955,
+  "numeric_features": [
+    "loan_amount",
+    "annual_income",
+    "dti",
+    "employment_years",
+    "employment_missing",
+    "fico_midpoint",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "open_accounts",
+    "public_records",
+    "revolving_balance",
+    "revolving_utilization",
+    "utilization_missing",
+    "total_accounts",
+    "bankruptcies",
+    "credit_history_months"
+  ],
+  "categorical_features": [
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "threshold": 0.5,
+  "class_weight": null,
+  "test_set_evaluated": false,
+  "timing_scope": "One local run; Logistic Regression fit includes encoding and scaling. Not a repeated pipeline benchmark."
+}

@@ -1,0 +1,905 @@
+{
+  "round": 3,
+  "pipeline": "CSV",
+  "row_count": 306462,
+  "monitored_export_seconds": 31.660190513000998,
+  "samples": [
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.58%",
+      "memory_usage_and_limit": "303.9MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "4.57%",
+      "memory_usage_and_limit": "1.104GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.18%",
+      "memory_usage_and_limit": "371.4MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "1.23%",
+      "memory_usage_and_limit": "366.7MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "15.83%",
+      "memory_usage_and_limit": "357.5MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.07%",
+      "memory_usage_and_limit": "103.4MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 0.0003756299993256107,
+      "sample_end_seconds": 1.5247465159991407,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "1.81%",
+      "memory_usage_and_limit": "277.9MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.12%",
+      "memory_usage_and_limit": "303.5MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "0.74%",
+      "memory_usage_and_limit": "1.104GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.56%",
+      "memory_usage_and_limit": "370.9MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.76%",
+      "memory_usage_and_limit": "367.2MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "292.74%",
+      "memory_usage_and_limit": "521.5MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.44%",
+      "memory_usage_and_limit": "103.4MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 2.02504407500237,
+      "sample_end_seconds": 3.562044557998888,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "1.88%",
+      "memory_usage_and_limit": "278.1MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.53%",
+      "memory_usage_and_limit": "304.4MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "5.59%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.19%",
+      "memory_usage_and_limit": "370.9MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "1.15%",
+      "memory_usage_and_limit": "367.6MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "313.49%",
+      "memory_usage_and_limit": "647.5MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.04%",
+      "memory_usage_and_limit": "103.2MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 4.062380381998082,
+      "sample_end_seconds": 5.584944786998676,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.80%",
+      "memory_usage_and_limit": "277.8MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.17%",
+      "memory_usage_and_limit": "304.4MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "1.12%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.14%",
+      "memory_usage_and_limit": "371.2MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.44%",
+      "memory_usage_and_limit": "367.4MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "149.10%",
+      "memory_usage_and_limit": "745.2MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.05%",
+      "memory_usage_and_limit": "103.3MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 6.085244973000954,
+      "sample_end_seconds": 7.618954188998032,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.84%",
+      "memory_usage_and_limit": "277.8MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.53%",
+      "memory_usage_and_limit": "304.2MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "1.19%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.19%",
+      "memory_usage_and_limit": "371.7MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.69%",
+      "memory_usage_and_limit": "366.8MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "235.93%",
+      "memory_usage_and_limit": "882MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "4.70%",
+      "memory_usage_and_limit": "104.1MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 8.119200556000578,
+      "sample_end_seconds": 9.652506143997016,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.75%",
+      "memory_usage_and_limit": "277.5MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.83%",
+      "memory_usage_and_limit": "305.2MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "0.79%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.12%",
+      "memory_usage_and_limit": "371.2MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.97%",
+      "memory_usage_and_limit": "366.6MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "322.40%",
+      "memory_usage_and_limit": "960.7MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.05%",
+      "memory_usage_and_limit": "103.2MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 10.15288078499725,
+      "sample_end_seconds": 11.703085845001624,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.67%",
+      "memory_usage_and_limit": "277.7MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.14%",
+      "memory_usage_and_limit": "305.6MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "0.67%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.20%",
+      "memory_usage_and_limit": "371.2MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.33%",
+      "memory_usage_and_limit": "366.3MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "165.31%",
+      "memory_usage_and_limit": "968.8MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.14%",
+      "memory_usage_and_limit": "103.5MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 12.203644173001521,
+      "sample_end_seconds": 13.722056056998554,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.55%",
+      "memory_usage_and_limit": "277.3MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.18%",
+      "memory_usage_and_limit": "305.8MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "1.07%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.37%",
+      "memory_usage_and_limit": "371.4MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.32%",
+      "memory_usage_and_limit": "367MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "152.22%",
+      "memory_usage_and_limit": "969.4MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.17%",
+      "memory_usage_and_limit": "103.9MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 14.222347830000217,
+      "sample_end_seconds": 15.746523558998888,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.60%",
+      "memory_usage_and_limit": "276.7MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.26%",
+      "memory_usage_and_limit": "305.8MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "2.34%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.13%",
+      "memory_usage_and_limit": "371.1MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.35%",
+      "memory_usage_and_limit": "367MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "179.14%",
+      "memory_usage_and_limit": "968.7MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.04%",
+      "memory_usage_and_limit": "103.8MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 16.246957930998178,
+      "sample_end_seconds": 17.76255369000137,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.52%",
+      "memory_usage_and_limit": "277.2MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.52%",
+      "memory_usage_and_limit": "306.1MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "0.88%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.24%",
+      "memory_usage_and_limit": "371.4MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.33%",
+      "memory_usage_and_limit": "366.6MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "159.29%",
+      "memory_usage_and_limit": "969.8MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "4.31%",
+      "memory_usage_and_limit": "104.5MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 18.262701701001788,
+      "sample_end_seconds": 19.782970813001157,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.61%",
+      "memory_usage_and_limit": "276.9MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.97%",
+      "memory_usage_and_limit": "306.6MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "0.90%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.17%",
+      "memory_usage_and_limit": "371.4MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.32%",
+      "memory_usage_and_limit": "366.3MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "162.37%",
+      "memory_usage_and_limit": "969.9MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.06%",
+      "memory_usage_and_limit": "104.6MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 20.283161701998324,
+      "sample_end_seconds": 21.814037078002002,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.58%",
+      "memory_usage_and_limit": "276.4MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.79%",
+      "memory_usage_and_limit": "306.5MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "1.11%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.27%",
+      "memory_usage_and_limit": "371.2MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.35%",
+      "memory_usage_and_limit": "366.3MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "143.32%",
+      "memory_usage_and_limit": "980.6MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.17%",
+      "memory_usage_and_limit": "104.5MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 22.314376795002318,
+      "sample_end_seconds": 23.85355831799825,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.68%",
+      "memory_usage_and_limit": "276.9MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "1.78%",
+      "memory_usage_and_limit": "306.6MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "0.85%",
+      "memory_usage_and_limit": "1.105GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.17%",
+      "memory_usage_and_limit": "371.2MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.31%",
+      "memory_usage_and_limit": "366.1MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "147.38%",
+      "memory_usage_and_limit": "980.5MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.06%",
+      "memory_usage_and_limit": "104.2MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 24.35373503000301,
+      "sample_end_seconds": 25.8740124620017,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.50%",
+      "memory_usage_and_limit": "276.4MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.91%",
+      "memory_usage_and_limit": "307MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "39.56%",
+      "memory_usage_and_limit": "1.106GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.15%",
+      "memory_usage_and_limit": "371.4MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.45%",
+      "memory_usage_and_limit": "367.3MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "5.64%",
+      "memory_usage_and_limit": "980.3MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.06%",
+      "memory_usage_and_limit": "104.3MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 26.374268412000674,
+      "sample_end_seconds": 27.895496454999375,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.75%",
+      "memory_usage_and_limit": "276.4MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.85%",
+      "memory_usage_and_limit": "306.7MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "36.29%",
+      "memory_usage_and_limit": "1.106GiB / 2GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.15%",
+      "memory_usage_and_limit": "371.2MiB / 1.5GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.44%",
+      "memory_usage_and_limit": "367.1MiB / 1GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "1.78%",
+      "memory_usage_and_limit": "980.4MiB / 3GiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "4.81%",
+      "memory_usage_and_limit": "104.5MiB / 512MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 28.400706230997457,
+      "sample_end_seconds": 29.925039030000335,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.71%",
+      "memory_usage_and_limit": "276.1MiB / 768MiB",
+      "ended_before_export_finished": true
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-datanode-1",
+      "cpu_percent": "0.46%",
+      "memory_usage_and_limit": "305.2MiB / 1GiB",
+      "ended_before_export_finished": false
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-hiveserver2-1",
+      "cpu_percent": "18.73%",
+      "memory_usage_and_limit": "1.107GiB / 2GiB",
+      "ended_before_export_finished": false
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-metastore-1",
+      "cpu_percent": "0.14%",
+      "memory_usage_and_limit": "371.4MiB / 1.5GiB",
+      "ended_before_export_finished": false
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-namenode-1",
+      "cpu_percent": "0.57%",
+      "memory_usage_and_limit": "366.6MiB / 1GiB",
+      "ended_before_export_finished": false
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-nodemanager-1",
+      "cpu_percent": "2.01%",
+      "memory_usage_and_limit": "980.1MiB / 3GiB",
+      "ended_before_export_finished": false
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-postgres-1",
+      "cpu_percent": "0.05%",
+      "memory_usage_and_limit": "104MiB / 512MiB",
+      "ended_before_export_finished": false
+    },
+    {
+      "sample_start_seconds": 30.425233194997418,
+      "sample_end_seconds": 31.955803422999452,
+      "container": "credit-risk-resourcemanager-1",
+      "cpu_percent": "0.63%",
+      "memory_usage_and_limit": "276.6MiB / 768MiB",
+      "ended_before_export_finished": false
+    }
+  ],
+  "monitor_errors": []
+}

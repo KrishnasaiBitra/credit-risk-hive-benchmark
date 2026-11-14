@@ -1,0 +1,43 @@
+services:
+  resourcemanager:
+    image: apache/hive:4.2.1
+    hostname: resourcemanager
+    entrypoint: ["/opt/hadoop/bin/yarn"]
+    command: ["resourcemanager"]
+    environment:
+      HADOOP_CONF_DIR: /opt/hadoop/etc/hadoop
+      HADOOP_HEAPSIZE_MAX: "384"
+      HADOOP_OPTS: "--add-opens=java.base/java.lang=ALL-UNNAMED"
+    volumes:
+      - ./hive-conf/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hive-conf/yarn-site.xml:/opt/hadoop/etc/hadoop/yarn-site.xml:ro
+      - ./hive-conf/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+    ports:
+      - "127.0.0.1:8088:8088"
+    mem_limit: 768m
+
+  nodemanager:
+    image: apache/hive:4.2.1
+    hostname: nodemanager
+    entrypoint: ["/opt/hadoop/bin/yarn"]
+    command: ["nodemanager"]
+    environment:
+      HADOOP_CONF_DIR: /opt/hadoop/etc/hadoop
+      HADOOP_HEAPSIZE_MAX: "384"
+      HADOOP_OPTS: "--add-opens=java.base/java.lang=ALL-UNNAMED"
+      HADOOP_HOME: /opt/hadoop
+      HADOOP_COMMON_HOME: /opt/hadoop
+      HADOOP_HDFS_HOME: /opt/hadoop
+      HADOOP_YARN_HOME: /opt/hadoop
+      HADOOP_MAPRED_HOME: /opt/hadoop
+    volumes:
+      - ./hive-conf/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hive-conf/yarn-site.xml:/opt/hadoop/etc/hadoop/yarn-site.xml:ro
+      - ./hive-conf/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - yarn_logs:/tmp/yarn-logs
+    depends_on:
+      - resourcemanager
+    mem_limit: 3g
+
+volumes:
+  yarn_logs:

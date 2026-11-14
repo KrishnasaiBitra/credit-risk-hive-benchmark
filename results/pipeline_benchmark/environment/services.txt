@@ -1,0 +1,8 @@
+NAME                            IMAGE                  COMMAND                  SERVICE           CREATED        STATUS                  PORTS
+credit-risk-datanode-1          apache/hadoop:3.5.0    "/usr/local/bin/dumb…"   datanode          19 hours ago   Up 19 hours             
+credit-risk-hiveserver2-1       apache/hive:4.2.1      "sh -c /entrypoint.sh"   hiveserver2       19 hours ago   Up 18 hours             127.0.0.1:10000->10000/tcp, 127.0.0.1:10002->10002/tcp
+credit-risk-metastore-1         apache/hive:4.2.1      "sh -c /entrypoint.sh"   metastore         19 hours ago   Up 19 hours             9083/tcp, 10000/tcp, 10002/tcp
+credit-risk-namenode-1          apache/hadoop:3.5.0    "/usr/local/bin/dumb…"   namenode          19 hours ago   Up 19 hours             127.0.0.1:9870->9870/tcp
+credit-risk-nodemanager-1       apache/hive:4.2.1      "/opt/hadoop/bin/yar…"   nodemanager       18 hours ago   Up 18 hours             9083/tcp, 10000/tcp, 10002/tcp
+credit-risk-postgres-1          postgres:17-bookworm   "docker-entrypoint.s…"   postgres          19 hours ago   Up 19 hours (healthy)   5432/tcp
+credit-risk-resourcemanager-1   apache/hive:4.2.1      "/opt/hadoop/bin/yar…"   resourcemanager   18 hours ago   Up 18 hours             127.0.0.1:8088->8088/tcp

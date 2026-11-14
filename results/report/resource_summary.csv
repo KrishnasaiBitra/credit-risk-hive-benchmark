@@ -1,0 +1,10 @@
+pipeline,round,complete_snapshots_during_export,median_sampled_total_cpu_percent,maximum_sampled_total_memory_mib
+CSV,1,17,155.31,3523.224
+Prepared_ORC,1,1,16.14,3515.408
+Raw_ORC,1,12,162.48000000000002,3678.344
+CSV,2,17,152.63,3553.5080000000003
+Prepared_ORC,2,1,38.6,2909.32
+Raw_ORC,2,13,157.74,3567.968
+CSV,3,15,166.37,3539.244
+Prepared_ORC,3,2,23.3,3511.796
+Raw_ORC,3,16,150.89499999999998,3505.272
