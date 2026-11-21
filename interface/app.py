@@ -202,6 +202,11 @@ def extensions():
     return read_json('results/model_extensions/comparison.json')
 
 
+@app.get('/api/model-comparison')
+def model_comparison():
+    return read_json('results/model_extensions/model_comparison_dashboard.json')
+
+
 class LoanInput(BaseModel):
     model_config = ConfigDict(extra='forbid', allow_inf_nan=False)
     loan_amount: float = Field(gt=0, le=1e9)
@@ -304,6 +309,7 @@ def predict(loan: LoanInput):
 
 
 DOWNLOADS = {
+    'model-reference-report': (PROJECT / 'results/model_extensions/MODEL_REFERENCE_COMPARISON.md', 'MODEL_REFERENCE_COMPARISON.md'),
     'extension-models': (PROJECT / 'results/model_extensions/model_comparison.csv', 'extended_model_comparison.csv'),
     'extension-groups': (PROJECT / 'results/model_extensions/group_metrics.csv', 'extended_group_metrics.csv'),
     'extension-method': (PROJECT / 'results/model_extensions/MODEL_EXTENSION_REPORT.md', 'MODEL_EXTENSION_REPORT.md'),

@@ -48,13 +48,13 @@ def main():
     curves=request('/api/curves')
     check(len(curves)==2 and all(2<=len(r['roc']['x'])<=1000 for r in curves),'Saved prediction curves')
     literature=request('/api/literature')
-    check(len(literature['papers'])==2 and len(literature['scores'])==5,'Two papers and five attributed model results')
+    check(len(literature['papers'])==2 and len(literature['scores'])==7,'Two papers and seven attributed model results')
     check(all(p['id']==p['doi'] and p['title'] for p in literature['papers']), 'Paper titles and DOI identifiers')
     check(all('DOI:' in r['source'] for r in literature['scores'] if r['source']!='Our project'), 'Published score labels use paper title and DOI')
     published=[r for r in literature['scores'] if r['source']!='Our project' and r['model']=='LightGBM'][0]
     check(published['roc_auc']==.8981 and published['f1']==.8111,'2025 Table V LightGBM transcription')
     for row in literature['scores']:
-        if row['source']=='Our project':
+        if row['source']=='Our project' and row['model'] in original.index:
             check(abs(row['roc_auc']-original.loc[row['model'],'roc_auc'])<1e-12,'Literature comparison uses frozen score '+row['model'])
     schema=request('/api/demo/schema')
     examples=request('/api/demo/examples')
@@ -80,7 +80,7 @@ def main():
         request('/api/predict',{**examples[0]['inputs'],**changes},expected=422)
         checks.append('Rejected '+label);print('PASS: Rejected '+label,flush=True)
     downloads=request('/api/downloads')
-    check(len(downloads)==13 and all(item['available'] for item in downloads),'Thirteen real downloads available')
+    check(len(downloads)==14 and all(item['available'] for item in downloads),'Fourteen real downloads available')
     for item in downloads:
         content=request('/api/download/'+item['id'])
         check(bool(content),'Download '+item['id'])

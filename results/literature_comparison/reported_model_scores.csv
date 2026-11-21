@@ -2,5 +2,7 @@ source,model,accuracy,recall,f1,roc_auc,threshold,evidence,provenance
 Assessing Fairness and Transparency in Credit Scoring Using Explainable AI (2025; DOI: 10.1109/CISCON66933.2025.11337606),Random Forest,0.818,0.7318,0.801,0.8883,,"Table V, PDF p. 6",Author-reported; not rerun
 Assessing Fairness and Transparency in Credit Scoring Using Explainable AI (2025; DOI: 10.1109/CISCON66933.2025.11337606),LightGBM,0.8284,0.7412,0.8111,0.8981,,"Table V, PDF p. 6",Author-reported; not rerun
 Assessing Fairness and Transparency in Credit Scoring Using Explainable AI (2025; DOI: 10.1109/CISCON66933.2025.11337606),XGBoost,0.8285,0.7425,0.8123,0.8988,,"Table V, PDF p. 6",Author-reported; not rerun
-Our project,Logistic Regression,0.6594713899464768,0.53359375,0.3068490688950289,0.6537442501847331,0.15,results/final_test/test_metrics.csv,"Frozen held-out test; 90,615 loans"
-Our project,LightGBM,0.6609722452132649,0.543359375,0.3116667786964218,0.6644182044351987,0.15,results/final_test/test_metrics.csv,"Frozen held-out test; 90,615 loans"
+Our project,Logistic Regression,0.6594713899,0.53359375,0.3068490689,0.6537442502,0.15,results/final_test/test_metrics.csv,"Original frozen experiment; 90,615 test loans"
+Our project,LightGBM,0.6609722452,0.543359375,0.3116667787,0.6644182044,0.15,results/final_test/test_metrics.csv,"Original frozen experiment; 90,615 test loans"
+Our project,CatBoost,0.6629034928,0.539765625,0.3114687585,0.6647387584,0.15,results/model_extensions/model_comparison.csv,Exploratory extension; reused historical holdout
+Our project,Adaptive Random Forest,0.5244054516,0.640546875,0.2756244327,0.5956101692,0.125,results/model_extensions/model_comparison.csv,Exploratory extension; reused historical holdout

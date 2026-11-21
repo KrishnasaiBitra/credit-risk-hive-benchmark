@@ -5,6 +5,13 @@ three equivalent Hive pipelines and audits home-ownership group disparities.
 
 **Live demonstration:** [Credit Risk Lab](https://credit-risk-hive-benchmark.vercel.app/)
 
+The **Model comparison** page contains all four predictive models, a Dummy
+baseline, four ROC/PR curves, selectable confusion matrices and a **Reference
+papers** view. The paper view attributes the 2025 Random Forest, LightGBM and
+XGBoost scores by title and DOI; it does not claim a matched replication. Download
+the [full comparison report](results/model_extensions/MODEL_REFERENCE_COMPARISON.md)
+for source locations, decision thresholds and evaluation limits.
+
 ## New model extension
 
 CatBoost and Adaptive Random Forest are implemented in a separate experiment.

@@ -6,7 +6,7 @@
       "title": "Bank loan analysis using customer usage data: A big data approach using Hadoop",
       "doi": "10.1109/TEL-NET.2017.8343582",
       "file": "Bank_loan_analysis_using_customer_usage_data_A_big_data_approach_using_Hadoop.pdf",
-      "evidence": "PDF pp. 3–7, dataset, results and conclusion",
+      "evidence": "PDF pp. 3\u20137, dataset, results and conclusion",
       "focus": "Historical, descriptive Lending Club loan analysis using Hadoop/HDFS/Hive/HiveQL.",
       "findings": [
         "The paper reports debt consolidation as 58.88% of loan purposes (p. 4).",
@@ -20,7 +20,7 @@
       "title": "Assessing Fairness and Transparency in Credit Scoring Using Explainable AI",
       "doi": "10.1109/CISCON66933.2025.11337606",
       "file": "Assessing_Fairness_and_Transparency_in_Credit_Scoring_Using_Explainable_AI.pdf",
-      "evidence": "PDF p. 3, Section III; pp. 5–6, Section IV and Table V",
+      "evidence": "PDF p. 3, Section III; pp. 5\u20136, Section IV and Table V",
       "focus": "Lending Club classification using Random Forest, LightGBM and XGBoost; SHAP-based interpretation is described.",
       "findings": [
         "Table V reports the highest model scores for XGBoost: accuracy 0.8285, recall 0.7425, F1 0.8123 and AUC 0.8988.",
@@ -66,24 +66,46 @@
     {
       "source": "Our project",
       "model": "Logistic Regression",
-      "accuracy": 0.6594713899464768,
+      "accuracy": 0.6594713899,
       "recall": 0.53359375,
-      "f1": 0.3068490688950289,
-      "roc_auc": 0.6537442501847331,
+      "f1": 0.3068490689,
+      "roc_auc": 0.6537442502,
       "threshold": 0.15,
       "evidence": "results/final_test/test_metrics.csv",
-      "provenance": "Frozen held-out test; 90,615 loans"
+      "provenance": "Original frozen experiment; 90,615 test loans"
     },
     {
       "source": "Our project",
       "model": "LightGBM",
-      "accuracy": 0.6609722452132649,
+      "accuracy": 0.6609722452,
       "recall": 0.543359375,
-      "f1": 0.3116667786964218,
-      "roc_auc": 0.6644182044351987,
+      "f1": 0.3116667787,
+      "roc_auc": 0.6644182044,
       "threshold": 0.15,
       "evidence": "results/final_test/test_metrics.csv",
-      "provenance": "Frozen held-out test; 90,615 loans"
+      "provenance": "Original frozen experiment; 90,615 test loans"
+    },
+    {
+      "source": "Our project",
+      "model": "CatBoost",
+      "accuracy": 0.6629034928,
+      "recall": 0.539765625,
+      "f1": 0.3114687585,
+      "roc_auc": 0.6647387584,
+      "threshold": 0.15,
+      "evidence": "results/model_extensions/model_comparison.csv",
+      "provenance": "Exploratory extension; reused historical holdout"
+    },
+    {
+      "source": "Our project",
+      "model": "Adaptive Random Forest",
+      "accuracy": 0.5244054516,
+      "recall": 0.640546875,
+      "f1": 0.2756244327,
+      "roc_auc": 0.5956101692,
+      "threshold": 0.125,
+      "evidence": "results/model_extensions/model_comparison.csv",
+      "provenance": "Exploratory extension; reused historical holdout"
     }
   ],
   "capabilities": [
@@ -95,21 +117,21 @@
     },
     {
       "aspect": "Dataset/cohort",
-      "paper_2017": "Approximately 1 GB of Lending Club data, Jan 2012–Dec 2016.",
+      "paper_2017": "Approximately 1 GB of Lending Club data, Jan 2012\u2013Dec 2016.",
       "paper_2025": "Lending Club; exact cohort and split protocol insufficiently specified for a matched rerun.",
-      "ours": "306,462 resolved 36-month loans, 2012–2014; 90,615-loan test split."
+      "ours": "306,462 resolved 36-month loans, 2012\u20132014; 90,615-loan test split."
     },
     {
       "aspect": "Predictive models",
       "paper_2017": "No trained predictive model evaluated in the reported analysis.",
       "paper_2025": "Random Forest, LightGBM and XGBoost.",
-      "ours": "Dummy baseline, Logistic Regression and LightGBM."
+      "ours": "Dummy baseline, Logistic Regression, LightGBM, CatBoost and Adaptive Random Forest; the last two are a separate exploratory extension."
     },
     {
       "aspect": "Class balance / decision rule",
       "paper_2017": "Not a predictive classification evaluation.",
       "paper_2025": "States undersampling for class balance; discusses NearMiss/Tomek Links. Threshold and split details not fully specified.",
-      "ours": "Original selected-cohort imbalance retained; validation maximum-F1 rule selects 0.15 for both trained models."
+      "ours": "Original selected-cohort imbalance retained. Validation-selected thresholds: 0.15 (LR/LightGBM/CatBoost), 0.125 (Adaptive Random Forest)."
     },
     {
       "aspect": "Input features",
@@ -133,13 +155,13 @@
       "aspect": "Quantitative group audit",
       "paper_2017": "No group error-rate disparity metrics reported.",
       "paper_2025": "Fairness/SHAP discussion, but no numeric group FPR/recall gaps in the supplied paper.",
-      "ours": "MORTGAGE/RENT/OWN audit: LightGBM FPR gap 23.32 pp and recall gap 25.37 pp. Substantial disparities remain."
+      "ours": "MORTGAGE/RENT/OWN audits for all four predictive models; full metrics and gaps in results/model_extensions."
     },
     {
       "aspect": "Explainability",
       "paper_2017": "Descriptive charts, not individual model explanations.",
       "paper_2025": "Describes SHAP-based local/global interpretation and discusses DTI, interest rate and income.",
-      "ours": "No SHAP or causal feature explanation implemented; this is a limitation relative to the paper’s stated scope."
+      "ours": "No SHAP or causal feature explanation implemented; this is a limitation relative to the paper\u2019s stated scope."
     },
     {
       "aspect": "Uncertainty / reproducibility",
@@ -155,17 +177,19 @@
     }
   ],
   "cautions": [
-    "These are side-by-side reported results, not a controlled head-to-head benchmark. We did not reproduce either paper’s full experimental setup.",
+    "These are side-by-side reported results, not a controlled head-to-head benchmark. We did not reproduce either paper\u2019s full experimental setup.",
     "Cohort, predictor set, target mapping, sampling and split definitions differ or are insufficiently specified. The 2025 paper states undersampling; our test cohort retains its selected natural imbalance (14.13% charged off).",
     "Threshold-dependent accuracy, recall and F1 also depend on decision rules. AUC is threshold-independent; its difference cannot be explained by the 0.15 threshold or imbalance alone.",
-    "The 2025 paper’s displayed confusion-matrix totals differ across models: 97,622 for RF/XGBoost and 65,082 for LightGBM (Figures 2–4). Table V is reproduced as author-reported, without silently reconciling those totals or recalculating its metrics.",
-    "No claim is made that our model is more accurate than the 2025 models, that our pipeline is 10.44 times faster than either paper, or that our group audit proves fairness."
+    "The 2025 paper\u2019s displayed confusion-matrix totals differ across models: 97,622 for RF/XGBoost and 65,082 for LightGBM (Figures 2\u20134). Table V is reproduced as author-reported, without silently reconciling those totals or recalculating its metrics.",
+    "No claim is made that our model is more accurate than the 2025 models, that our pipeline is 10.44 times faster than either paper, or that our group audit proves fairness.",
+    "CatBoost and Adaptive Random Forest were proposed after the original test results were known; their historical holdout comparisons are exploratory, not fresh confirmatory tests."
   ],
-  "contribution": "Our added work is the controlled equivalent-feature Hive pipeline benchmark, explicit preparation/storage measurements, quantitative home-ownership error audit and reproducibility evidence. Our reported predictive scores are lower than the 2025 paper’s scores, and SHAP is not implemented here.",
+  "contribution": "Our added work is the controlled equivalent-feature Hive pipeline benchmark, explicit preparation/storage measurements, quantitative home-ownership error audit and reproducibility evidence. Our reported predictive scores are lower than the 2025 paper\u2019s scores, and SHAP is not implemented here.",
   "dataset_reference": "wordsforthewise/Lending Club on Kaggle is the data source, not a third research paper with performance results.",
   "generated_at_utc": "2026-11-14T07:39:51.162062+00:00",
   "paper_file_sha256": {
     "Bank_loan_analysis_using_customer_usage_data_A_big_data_approach_using_Hadoop.pdf": "ea501c6f1dfaf293ebc78e8c1b82699f614217a2ffaa37374a2f9fe7a9a819f6",
     "Assessing_Fairness_and_Transparency_in_Credit_Scoring_Using_Explainable_AI.pdf": "72c1c4b64132c55491a8b6837d9f25925cd36cb226d35a198aa645cc0f174c6e"
-  }
+  },
+  "comparison_scope": "Original models plus CatBoost and Adaptive Random Forest extension; published results were not rerun."
 }

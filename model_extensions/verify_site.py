@@ -33,6 +33,17 @@ def main():
     check(len(summary['models'])==5,'Dummy plus four predictive models')
     saved=read_json(a.run/'evaluation/comparison.json')
     check(summary['models']==saved['models'],'Displayed metrics exactly match saved evaluation')
+    comparison=request('/api/model-comparison')
+    check(comparison['models']==summary['models'],'Unified comparison retains all exact model scores')
+    check(len(comparison['curves'])==4 and len({r['model'] for r in comparison['curves']})==4,'Four distinct ROC/PR curves')
+    for row in comparison['models']:
+        check(sum(row[k] for k in ['true_negatives','false_positives','false_negatives','true_positives'])==90615,'Confusion matrix count: '+row['model'])
+    references=comparison['references']
+    check(len(references['scores'])==7,'Three published rows plus four project rows')
+    paper=[r for r in references['scores'] if r['source']!='Our project']
+    check({r['model'] for r in paper}=={'Random Forest','LightGBM','XGBoost'},'Published algorithms correctly attributed')
+    check(next(r for r in paper if r['model']=='LightGBM')['roc_auc']==0.8981,'Published LightGBM AUC unchanged')
+    check(all(r['threshold'] is None for r in paper),'Unknown paper thresholds remain missing')
     original=read_json(a.project/'results/final_test/evaluation_manifest.json')
     models={name:joblib.load(a.project/'models'/file) for name,file in [('Logistic Regression','logistic_regression.joblib'),('LightGBM','lightgbm.joblib')]}
     models.update({read_json(a.run/k/'selection.json')['model']:joblib.load(a.run/k/'model.joblib') for k in ['catboost','arf']})
@@ -55,7 +66,7 @@ def main():
         request('/api/predict',{**examples[0]['inputs'],**changes},expected=422)
     check(True,'Invalid input rejected')
     downloads=request('/api/downloads')
-    check(len(downloads)==13 and all(d['available'] for d in downloads),'13 real downloads')
+    check(len(downloads)==14 and all(d['available'] for d in downloads),'14 real downloads')
     for d in downloads:
         check(bool(request('/api/download/'+d['id'])),'Download '+d['id'])
     for file,expected in original['file_sha256'].items():
