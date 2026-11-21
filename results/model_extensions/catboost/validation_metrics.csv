@@ -1,0 +1,2 @@
+model,threshold,accuracy,precision,chargeoff_recall,false_positive_rate,f1,roc_auc,average_precision,brier_score,loans,true_positives,false_positives,false_negatives,true_negatives
+CatBoost,0.15,0.6693488986171913,0.20749846342962508,0.5322122963741461,0.30975336322869956,0.2985849056603774,0.6593866624834249,0.21657366556697039,0.11055443089401627,71955,5064,19341,4451,43099

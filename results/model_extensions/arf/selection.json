@@ -1,0 +1,115 @@
+{
+  "model": "Adaptive Random Forest",
+  "model_key": "arf",
+  "features": [
+    "loan_amount",
+    "annual_income",
+    "dti",
+    "employment_years",
+    "employment_missing",
+    "fico_midpoint",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "open_accounts",
+    "public_records",
+    "revolving_balance",
+    "revolving_utilization",
+    "utilization_missing",
+    "total_accounts",
+    "bankruptcies",
+    "credit_history_months",
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "categorical_features": [
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "training_rows": 143892,
+  "validation_rows": 71955,
+  "selected_threshold": 0.125,
+  "threshold_grid": [
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "threshold_selection_rule": "Highest F1 on the predefined grid; ties use the higher threshold.",
+  "hyperparameters": {
+    "n_models": 10,
+    "max_features": "sqrt",
+    "lambda_value": 6,
+    "grace_period": 200,
+    "max_depth": 12,
+    "leaf_prediction": "nba",
+    "nominal_attributes": [
+      "home_ownership_group",
+      "purpose",
+      "verification_status"
+    ],
+    "max_size": 16.0,
+    "memory_estimate_period": 50000,
+    "seed": 42
+  },
+  "validation_metrics": {
+    "model": "Adaptive Random Forest",
+    "threshold": 0.125,
+    "accuracy": 0.5342505732749635,
+    "precision": 0.1673966071626566,
+    "chargeoff_recall": 0.6346820809248555,
+    "false_positive_rate": 0.4810538116591928,
+    "f1": 0.2649207080344805,
+    "roc_auc": 0.5986809390614569,
+    "average_precision": 0.16892554595597004,
+    "brier_score": 0.1136590497398767,
+    "loans": 71955,
+    "true_positives": 6039,
+    "false_positives": 30037,
+    "false_negatives": 3476,
+    "true_negatives": 32403
+  },
+  "fit_seconds": 71.51715373405023,
+  "validation_prediction_seconds": 6.285861584998202,
+  "model_sha256": "c9f5e3dc6e20663b3f82cabc7743fb9555517eb1bbdc3edf9891224545e069a7",
+  "original_models_sha256": {
+    "models/dummy_classifier.joblib": "a29953bac86af56b3b471cdd0b16e058c435b6dd39a73873388646300a4cb070",
+    "models/logistic_regression.joblib": "d9b67220be537ed5836fcf3462056ac18d4304b67984badb68821cd398d0025e",
+    "models/lightgbm.joblib": "25976b4a74c8cc4c20d2aa972f1a78f68013028da15d55a614c0c8f44aa031ad"
+  },
+  "data_sha256": {
+    "train": "c8be80c56a5a2c73e6b5db1a0a7201227e37a1897b76c3420cf3b88460cc16a6",
+    "validation": "c81418233b1914702876c9a79a6281ebefca77a91f48a82cd28378f0a8b89a2e"
+  },
+  "packages": {
+    "catboost": "1.2.10",
+    "river": "0.27.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "evaluation_mode": "Fit on training; select threshold on validation; freeze for holdout prediction.",
+  "test_set_evaluated": false,
+  "completed_at_utc": "2026-11-21T16:27:43.628619+00:00",
+  "training_order": "Issue month ascending; numeric loan ID breaks within-month ties. Exact within-month event order is unavailable.",
+  "training_order_id_sha256": "704ba342210d37ace866f76b1f23f873efe1b23e4eb60fe46948f93234628760",
+  "training_drifts": 20,
+  "training_warnings": 25,
+  "drift_detector": {
+    "type": "ADWIN",
+    "delta": 0.001
+  },
+  "warning_detector": {
+    "type": "ADWIN",
+    "delta": 0.01
+  }
+}

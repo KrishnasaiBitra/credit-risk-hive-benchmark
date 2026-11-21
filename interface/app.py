@@ -87,8 +87,23 @@ def demo_schema():
     }
 
 
-@lru_cache(maxsize=2)
+def extension_manifest():
+    path = PROJECT / 'results/model_extensions/inference_manifest.json'
+    return read_json('results/model_extensions/inference_manifest.json') if path.is_file() else {'models': {}}
+
+
+@lru_cache(maxsize=4)
 def load_model(name):
+    if name not in MODEL_FILES:
+        from model_extensions.portable import PortableCatBoost
+        config = extension_manifest()
+        spec = config['models'][name]
+        path = require(PROJECT / spec['file'])
+        if hashlib.sha256(path.read_bytes()).hexdigest() != spec['sha256']:
+            raise HTTPException(503, 'Extension model fingerprint differs from its recorded experiment.')
+        if spec['format'] == 'catboost_python':
+            return PortableCatBoost(path, config['features'], config['categorical_features'])
+        return joblib.load(path)
     relative = 'models/' + MODEL_FILES[name]
     path = require(PROJECT / relative)
     expected = manifest()['file_sha256'][relative]
@@ -182,6 +197,11 @@ def literature():
     return read_json('results/literature_comparison/comparison.json')
 
 
+@app.get('/api/extensions')
+def extensions():
+    return read_json('results/model_extensions/comparison.json')
+
+
 class LoanInput(BaseModel):
     model_config = ConfigDict(extra='forbid', allow_inf_nan=False)
     loan_amount: float = Field(gt=0, le=1e9)
@@ -229,7 +249,8 @@ def make_features(loan):
 
 @app.get('/api/demo/schema')
 def get_demo_schema():
-    return demo_schema()
+    schema = demo_schema()
+    return {**schema, 'thresholds': {**schema['thresholds'], **{name: spec['threshold'] for name, spec in extension_manifest()['models'].items()}}}
 
 
 @app.get('/api/demo/examples')
@@ -271,11 +292,11 @@ def predict(loan: LoanInput):
             warnings.append(f'{key.replace("_", " ").capitalize()} is outside the observed training range ({limits["min"]:g}–{limits["max"]:g}).')
     results = []
     with predict_lock:
-        for name in MODEL_FILES:
+        for name in [*MODEL_FILES, *extension_manifest()['models']]:
             model = load_model(name)
             start = time.perf_counter()
             probability = float(model.predict_proba(features)[0, list(model.classes_).index(1)])
-            threshold = float(manifest()['selected_thresholds'][name])
+            threshold = float(manifest()['selected_thresholds'][name] if name in MODEL_FILES else extension_manifest()['models'][name]['threshold'])
             results.append({'model': name, 'probability': probability, 'threshold': threshold,
                             'flagged': probability >= threshold, 'prediction_seconds': time.perf_counter() - start})
     return {'results': results, 'features': features.iloc[0].to_dict(), 'warnings': warnings,
@@ -283,6 +304,9 @@ def predict(loan: LoanInput):
 
 
 DOWNLOADS = {
+    'extension-models': (PROJECT / 'results/model_extensions/model_comparison.csv', 'extended_model_comparison.csv'),
+    'extension-groups': (PROJECT / 'results/model_extensions/group_metrics.csv', 'extended_group_metrics.csv'),
+    'extension-method': (PROJECT / 'results/model_extensions/MODEL_EXTENSION_REPORT.md', 'MODEL_EXTENSION_REPORT.md'),
     'report': (HERE / 'assets/project_report.pdf', 'Credit_Risk_Hive_Project_Report.pdf'),
     'model-results': (FINAL / 'test_metrics.csv', 'model_test_results.csv'),
     'pipeline-results': (LATENCY / 'summary.csv', 'pipeline_export_results.csv'),

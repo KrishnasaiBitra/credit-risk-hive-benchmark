@@ -1,0 +1,21 @@
+{
+  "test_sha256": "49d65e5cc471a0e8faadb95a00044de8f1b7d92e84912e18ab464e779a1fb98d",
+  "model_sha256": {
+    "catboost": "34aef564133fcd3ad2720350ba3865b702620bccba9924c66a7958dda422663b",
+    "arf": "c9f5e3dc6e20663b3f82cabc7743fb9555517eb1bbdc3edf9891224545e069a7"
+  },
+  "selected_thresholds": {
+    "CatBoost": 0.15,
+    "Adaptive Random Forest": 0.125
+  },
+  "test_labels_used_for_learning": false,
+  "completed_at_utc": "2026-11-21T16:28:35.183849+00:00",
+  "limitations": [
+    "Extension experiment: the original test results were already known before these models were proposed. This reused historical holdout is not a fresh confirmatory test.",
+    "No model tuning or learning uses test outcomes. Thresholds use the original validation-only maximum-F1 grid.",
+    "ARF learns only the training partition, ordered by issue month and loan ID; it is frozen for validation/test. These results do not demonstrate live drift adaptation.",
+    "Loan outcomes are delayed. The retrospective issue-date split is not a valid prospective label-arrival simulation.",
+    "One fixed configuration and seed per new model; no new significance claim, fairness mitigation or new algorithm is established.",
+    "Home ownership is a predictor and an audit grouping; protected-group or causal fairness is not established."
+  ]
+}

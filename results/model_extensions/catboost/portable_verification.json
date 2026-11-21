@@ -1,0 +1,7 @@
+{
+  "rows": 71955,
+  "maximum_absolute_probability_error": 2.220446049250313e-16,
+  "atol": 1e-10,
+  "sha256": "0ed98add2deab2e9ccd31bfc54c575293b39ae51780ba9147854aad6e6b8571f",
+  "export": "CatBoost official Python export with training Pool; sigmoid applied to raw margin."
+}

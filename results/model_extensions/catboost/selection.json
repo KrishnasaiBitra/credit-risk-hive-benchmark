@@ -1,0 +1,100 @@
+{
+  "model": "CatBoost",
+  "model_key": "catboost",
+  "features": [
+    "loan_amount",
+    "annual_income",
+    "dti",
+    "employment_years",
+    "employment_missing",
+    "fico_midpoint",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "open_accounts",
+    "public_records",
+    "revolving_balance",
+    "revolving_utilization",
+    "utilization_missing",
+    "total_accounts",
+    "bankruptcies",
+    "credit_history_months",
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "categorical_features": [
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "training_rows": 143892,
+  "validation_rows": 71955,
+  "selected_threshold": 0.15,
+  "threshold_grid": [
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.25,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "threshold_selection_rule": "Highest F1 on the predefined grid; ties use the higher threshold.",
+  "hyperparameters": {
+    "iterations": 1500,
+    "depth": 6,
+    "learning_rate": 0.04,
+    "l2_leaf_reg": 5,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 42,
+    "thread_count": 2,
+    "allow_writing_files": false
+  },
+  "validation_metrics": {
+    "model": "CatBoost",
+    "threshold": 0.15,
+    "accuracy": 0.6693488986171913,
+    "precision": 0.20749846342962508,
+    "chargeoff_recall": 0.5322122963741461,
+    "false_positive_rate": 0.30975336322869956,
+    "f1": 0.2985849056603774,
+    "roc_auc": 0.6593866624834249,
+    "average_precision": 0.21657366556697039,
+    "brier_score": 0.11055443089401627,
+    "loans": 71955,
+    "true_positives": 5064,
+    "false_positives": 19341,
+    "false_negatives": 4451,
+    "true_negatives": 43099
+  },
+  "fit_seconds": 39.67266005795682,
+  "validation_prediction_seconds": 0.05740685301134363,
+  "model_sha256": "34aef564133fcd3ad2720350ba3865b702620bccba9924c66a7958dda422663b",
+  "original_models_sha256": {
+    "models/dummy_classifier.joblib": "a29953bac86af56b3b471cdd0b16e058c435b6dd39a73873388646300a4cb070",
+    "models/logistic_regression.joblib": "d9b67220be537ed5836fcf3462056ac18d4304b67984badb68821cd398d0025e",
+    "models/lightgbm.joblib": "25976b4a74c8cc4c20d2aa972f1a78f68013028da15d55a614c0c8f44aa031ad"
+  },
+  "data_sha256": {
+    "train": "c8be80c56a5a2c73e6b5db1a0a7201227e37a1897b76c3420cf3b88460cc16a6",
+    "validation": "c81418233b1914702876c9a79a6281ebefca77a91f48a82cd28378f0a8b89a2e"
+  },
+  "packages": {
+    "catboost": "1.2.10",
+    "river": "0.27.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "evaluation_mode": "Fit on training; select threshold on validation; freeze for holdout prediction.",
+  "test_set_evaluated": false,
+  "completed_at_utc": "2026-11-21T16:26:27.511193+00:00",
+  "best_iteration": 604,
+  "tree_count": 605
+}

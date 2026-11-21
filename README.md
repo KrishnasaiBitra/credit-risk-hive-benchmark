@@ -5,6 +5,15 @@ three equivalent Hive pipelines and audits home-ownership group disparities.
 
 **Live demonstration:** [Credit Risk Lab](https://credit-risk-hive-benchmark.vercel.app/)
 
+## New model extension
+
+CatBoost and Adaptive Random Forest are implemented in a separate experiment.
+See [method and results](results/model_extensions/MODEL_EXTENSION_REPORT.md),
+the **New model experiments** page and the four-model loan demo. CatBoost uses
+its official standalone export for hosted inference; River is pinned at 0.27.0.
+Original experiment files remain unchanged. The reused historical holdout does
+not establish a new confirmatory performance improvement or live drift adaptation.
+
 - [Reproduce and verify the work](REPRODUCE.md)
 - [Report](results/report/project_results.md)
 - [Demo guide and presentation outline](DEMO_GUIDE.md)

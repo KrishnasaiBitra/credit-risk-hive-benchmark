@@ -36,7 +36,7 @@ def main():
             return json.loads(raw) if response.headers.get('Content-Type','').startswith('application/json') else raw
     check(request('/api/health')['status']=='ok','Local artifact health')
     html=request('/').decode()
-    check(all(f'href="#{page}"' in html for page in ['overview','architecture','pipelines','models','fairness','literature','demo','reports']),'Eight navigation routes')
+    check(all(f'href="#{page}"' in html for page in ['overview','architecture','pipelines','models','extensions','fairness','literature','demo','reports']),'Nine navigation routes')
     for path in ['/static/styles.css','/static/app.js','/static/architecture.js','/static/architecture.css','/static/vendor/plotly.min.js']:
         check(len(request(path))>100,'Local frontend asset '+path)
     research=request('/api/research')
@@ -65,6 +65,7 @@ def main():
         result=request('/api/predict',example['inputs'])
         check(len(result['features'])==19,'Exact feature count '+example['id'])
         for row in result['results']:
+            if row['model'] not in predictions: continue  # New models are covered by model_extensions.verify_site.
             expected=predictions[row['model']].loc[example['id']]
             check(np.isclose(row['probability'],expected.probability,atol=1e-12,rtol=0),f'Historical probability: {row["model"]}, {example["id"]}')
             check(row['threshold']==.15 and int(row['flagged'])==int(expected.prediction),'Frozen flag: '+row['model'])
@@ -79,7 +80,7 @@ def main():
         request('/api/predict',{**examples[0]['inputs'],**changes},expected=422)
         checks.append('Rejected '+label);print('PASS: Rejected '+label,flush=True)
     downloads=request('/api/downloads')
-    check(len(downloads)==10 and all(item['available'] for item in downloads),'Ten real downloads available')
+    check(len(downloads)==13 and all(item['available'] for item in downloads),'Thirteen real downloads available')
     for item in downloads:
         content=request('/api/download/'+item['id'])
         check(bool(content),'Download '+item['id'])

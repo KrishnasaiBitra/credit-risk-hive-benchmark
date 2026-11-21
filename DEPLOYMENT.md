@@ -22,6 +22,17 @@ The original joblib model files are unchanged. To recreate this fallback on Linu
 install the development tool `patchelf==0.17.2.4` and run
 `python scripts/prepare_openmp.py`. It is already included for deployment.
 
+## Model extension
+
+The four-model demo adds CatBoost and Adaptive Random Forest. The trained native
+CatBoost artifact is retained for offline verification; hosted inference uses the
+official standalone Python export, checked on all 71,955 validation rows against
+native prediction (maximum absolute error about 2.22e-16). This avoids installing
+the large CatBoost training library in the serverless function. ARF uses River
+0.27.0 and never learns from web form entries. Its threshold is 0.125; the other
+three predictive models use 0.15. New scores and group audits have separate
+downloads; the original PDF continues to describe the original experiment.
+
 ## Included data
 
 `interface/runtime/` contains source-derived research/schema/curve payloads and

@@ -1,0 +1,2 @@
+model,threshold,accuracy,precision,chargeoff_recall,false_positive_rate,f1,roc_auc,average_precision,brier_score,loans,true_positives,false_positives,false_negatives,true_negatives
+Adaptive Random Forest,0.125,0.5342505732749635,0.1673966071626566,0.6346820809248555,0.4810538116591928,0.2649207080344805,0.5986809390614569,0.16892554595597004,0.1136590497398767,71955,6039,30037,3476,32403

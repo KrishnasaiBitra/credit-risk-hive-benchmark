@@ -1,0 +1,42 @@
+{
+  "models": {
+    "CatBoost": {
+      "file": "models/extensions/catboost_model.py",
+      "sha256": "0ed98add2deab2e9ccd31bfc54c575293b39ae51780ba9147854aad6e6b8571f",
+      "threshold": 0.15,
+      "format": "catboost_python"
+    },
+    "Adaptive Random Forest": {
+      "file": "models/extensions/adaptive_random_forest.joblib",
+      "sha256": "c9f5e3dc6e20663b3f82cabc7743fb9555517eb1bbdc3edf9891224545e069a7",
+      "threshold": 0.125,
+      "format": "joblib"
+    }
+  },
+  "features": [
+    "loan_amount",
+    "annual_income",
+    "dti",
+    "employment_years",
+    "employment_missing",
+    "fico_midpoint",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "open_accounts",
+    "public_records",
+    "revolving_balance",
+    "revolving_utilization",
+    "utilization_missing",
+    "total_accounts",
+    "bankruptcies",
+    "credit_history_months",
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ],
+  "categorical_features": [
+    "home_ownership_group",
+    "purpose",
+    "verification_status"
+  ]
+}
